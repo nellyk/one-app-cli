@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    branches: [ main, beta ]
+    branches: [ main, feat/yarn-2-release ]
 jobs:
   release:
     name: Release
@@ -32,9 +32,5 @@ jobs:
       - name: Releasing Packages
         run: yarn release
         env:
-          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
-          GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
-          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-          GIT_COMMITTER_NAME: ${{ secrets.GIT_COMMITTER_NAME }}
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
