@@ -59,6 +59,7 @@
       "main",
       "next",
       "next-major",
+      "feat/yarn-2-release",
       {
         "name": "beta",
         "prerelease": true
